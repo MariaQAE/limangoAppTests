@@ -1,0 +1,6 @@
+.idea/
+/.idea/workspace.xml
+out/
+/local.properties
+*.iml
+*.ipr
