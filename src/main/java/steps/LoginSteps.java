@@ -3,13 +3,15 @@ package steps;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
 import pages.LoginPage;
+import pages.LoginPageIOS;
 
 public class LoginSteps extends ScenarioSteps {
 
 	private static final long serialVersionUID = 1L;
 
 	LoginPage loginPage;
-	
+	LoginPageIOS loginPageIOS;
+
 
 	@Step("Send Keys to Login")
 	public void sendCredentialsKeys() {
@@ -30,5 +32,16 @@ public class LoginSteps extends ScenarioSteps {
 	public void verifyPassword() {
 		loginPage.verifyPassword();
 	}
+
+	@Step("Start LogIn")
+	public void startLogInIOS() {
+		loginPageIOS.sendKeysToLogin();
+	}
+
+	@Step("Verify Result")
+	public void verifyResultIOS() {
+		loginPageIOS.startLogIn();
+	}
+
 }
 
